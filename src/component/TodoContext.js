@@ -31,11 +31,14 @@ const initialTodos = [
 function todoReducer(state, action) {
     switch(action.type) {
         case "CREATE":
+            console.log(action);
             return state.concat(action.todo);
         case "TOGGLE":
-            return state.map(
-                todo => todo.id === action.id ? {...todo,done: !todo.done} : todo.done
+            const result = state.map(
+                todo => todo.id === action.id ? {...todo,done: !todo.done} : {...todo}
             );
+            console.log(result);
+            return result;
         case "REMOVE":
             return state.filter(todo => todo.id !== action.id);
         default:

@@ -16,3 +16,7 @@
 - reducer 를 이용하여 상태와 동작을 정의하고
 - context 를 정의하고 => 마치 전역 변수처럼 provider 를 이용해 값을 넘겨준다
 - provider 의 내부에서만 정의한 context 를 가져다 사용할 수 있다.
+
+5. 기능 구현
+- dispatch 를 잘 선언하는게 중요
+- date 의 toLocaleDateString 함수를 이용하여 날짜 포멧을 지정할 수 있다.
